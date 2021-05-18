@@ -8,7 +8,7 @@ import com.spring.core.member.MemberServiceImpl;
 //순수 자바로 개발
 public class MemberApp {
     public static void main(String[] args){
-        MemberService memberService=new MemberServiceImpl();
+        MemberService memberService = new MemberServiceImpl();
         Member member1 = new Member(1L, "Test1", Grade.VIP);
         memberService.join(member1);
 

@@ -10,7 +10,7 @@ public class MemberServiceTest {
     @Test
     void join(){
         //given
-        Member member=new Member(1L,"test",Grade.BASIC);
+        Member member = new Member(1L,"test",Grade.BASIC);
 
         //when
         memberService.join(member);

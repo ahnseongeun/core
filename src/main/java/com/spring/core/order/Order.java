@@ -18,6 +18,7 @@ public class Order {
     public int calculatePrice(){
         return itemPrice - discountPrice;
     }
+
     public Long getMemberId() {
         return MemberId;
     }
