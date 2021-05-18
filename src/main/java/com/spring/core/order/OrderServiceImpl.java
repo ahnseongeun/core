@@ -2,6 +2,7 @@ package com.spring.core.order;
 
 import com.spring.core.discount.DiscountPolicy;
 import com.spring.core.discount.FixDiscountPolicy;
+import com.spring.core.discount.RateDisCountPolicy;
 import com.spring.core.member.Member;
 import com.spring.core.member.MemberRepository;
 import com.spring.core.member.MemoryMemberRepository;
