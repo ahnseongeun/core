@@ -56,8 +56,8 @@ public class SingletonTest {
 
         AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
 
+        //호출 할 때마다 객체를 생성
         MemberService memberService1 = ac.getBean("memberService", MemberService.class);
-
         MemberService memberService2 = ac.getBean("memberService", MemberService.class);
 
 
