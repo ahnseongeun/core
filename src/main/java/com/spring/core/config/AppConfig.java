@@ -14,6 +14,14 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AppConfig {
 
+    //@Bean memberService -> new MemoryMemberRepository()
+    //@Bean orderService -> new MemoryMemberRepository()
+    //여기서 싱글톤이 깨지는 문제가 있지 않을까?? -> new가 계속 사용되는데 스프링은 어떻게 싱글톤을 유지하는 것일까??
+    /*
+       memberService()에서 memberRepository()를 매개변수로 받아서 사용할 때 memberRepository가 사용되지 않는다.
+       그러면 어떻게 스프링은 한번만 memberRepository를 사용해서 싱글톤을 보장해주는 것인가?
+     */
+
     @Bean
     public MemberRepository memberRepository(){
         return new MemoryMemberRepository();

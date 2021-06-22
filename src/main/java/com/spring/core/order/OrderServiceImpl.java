@@ -14,6 +14,10 @@ public class OrderServiceImpl implements OrderService{
         this.discountPolicy = discountPolicy;
     }
 
+    public MemberRepository GetMemberRepository(){
+        return memberRepository;
+    }
+
     //아래와 같은 구조는 OrderServiceImpl가 DiscountPolicy와 FixDiscountPolicy를 둘다 의존하고 있는 것이다.
     // -> DIP(Dependency inversion principle)를 위반하고 있는 것이다.
     //FixDiscountPolicy를 RateDiscountPolicy로 변경하는 순간 OrderServiceImpl의 소스 코드도 함께 변경해야한다.
