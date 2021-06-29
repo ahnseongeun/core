@@ -49,6 +49,12 @@ AppConfig도 스프링 빈이 된다.
   - @ComponentScan은 이름 그대로 @Component 애노테이션이 붙은 클래스를 스캔해서 스프링 빈으로 등록한다.
   - 이전의 AppConfig에서는 @Bean을 이용해서 사용자가 직접 의존관계를 작성했다. 하지만 이제는 구현체에 @Component와 의존관계가 필요한 클래스에 @Autowired
   라는 애노테이션을 통해서 더 간단하게 Bean들을 관리 할 수 있다.
+    
+- basePackages로 탐색할 package를 정할 수 있다.
+  - 그럼 default는 무엇인가?? 해당 Config의 붙은 package를 기준으로 탐색한다. 그래서 Config 즉, 설정 파일을 프로젝트 최상단에 두는 방법이 있다. 
+  - SpringBootApplication에 Component가 기본으로 들어있다.
+  - ComponentScan은 Component, Controller, Service, Repository, Configuration도 추가로 대상에 포함한다.
+  - 애노테이션은 상속관계라는 것이없다. 애노테이션이 특징 애노테이션을 들고 있는 것을 인식할 수 있다는 것은 자바 언어가 지원하는 기능이 아니라 스프링이 지원하는 기능이다.
   
 
     
